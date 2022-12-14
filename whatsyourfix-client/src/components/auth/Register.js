@@ -30,7 +30,7 @@ export const Register = () => {
                 .then(res => {
                     if ("token" in res) {
                         localStorage.setItem("wyf_token", res.token)
-                        navigate("/")
+                        navigate("/home")
                     }
                 })
         } else {

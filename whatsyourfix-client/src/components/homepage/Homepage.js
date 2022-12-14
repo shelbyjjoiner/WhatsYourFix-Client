@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getHobbies } from "../../managers/HobbiesManager"
+import { getPosts } from "../../managers/PostsManager"
 import "./homepage.css"
 
 export const Homepage = () => {
+    const [posts, setPosts] = useState([])
     const [hobbies, setHobbies] = useState([])
     const navigate = useNavigate()
 
     useEffect(() => {
-        getHobbies().then(data => setHobbies(data))
+        getPosts().then(data => setPosts(data))
     }, [])
+
 
     return <>
         <form className="homepage">
@@ -18,16 +21,20 @@ export const Homepage = () => {
         </form>
         <article className="hobbies">
             <h1>Hobbies</h1>
-            {
-                hobbies.map(hobbie => {
-                    return <section key={`hobbie--${hobbie.id}`} className="hobby">
-                        <div className="hobby__label">{hobbie.label}</div>
-                    </section>
-                })
-            }
+            <button className="create-hobby" onClick={() => navigate(`/hobby`)}>Add Hobby</button>
         </article>
-        <article className>
-
+        <h1>Posts</h1>
+        <article className="posts">
+            <button className="btn btn-2 btn-sep icon-create"
+                onClick={() => {
+                    navigate({ pathname: "/posts/new" })
+                }}
+            >Make New Post</button>
+            <button className="btn btn-2 btn-sep icon-create"
+                onClick={() => {
+                    navigate({ pathname: "/posts/view" })
+                }}
+            >View Posts</button>
         </article>
 
     </>
