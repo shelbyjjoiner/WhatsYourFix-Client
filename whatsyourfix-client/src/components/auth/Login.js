@@ -39,7 +39,7 @@ export const Login = () => {
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputUsername"> Username</label>
-                        <input ref={username} type="username" id="username" className="form-control" placeholder="Username" required autoFocus />
+                        <input ref={username} type="username" id="username" className="form-control" placeholder="Username" required />
                     </fieldset>
                     <fieldset>
                         <label htmlFor="inputPassword"> Password </label>
@@ -50,10 +50,10 @@ export const Login = () => {
                     }}>
                         <button className="btn btn-1 btn-sep icon-send" type="submit">Sign In</button>
                     </fieldset>
+                    <section className="link--register">
+                        <Link to="/register">Not a member yet?</Link>
+                    </section>
                 </form>
-            </section>
-            <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
             </section>
         </main>
     )

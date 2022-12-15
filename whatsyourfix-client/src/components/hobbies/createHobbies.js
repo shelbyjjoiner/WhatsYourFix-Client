@@ -2,8 +2,6 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { createHobby, getHobbies } from "../../managers/HobbiesManager"
 
-
-
 export const NewHobby = () => {
     const navigate = useNavigate()
     const [hobby, setHobby] = useState([])
@@ -12,14 +10,14 @@ export const NewHobby = () => {
     })
 
     useEffect(() => {
-        getHobbies().then(setCurrentHobby)
+        getHobbies().then(setHobby)
     }, [])
 
     const changeHobbyState = (evt) => {
         const copy = { ...hobby }
         const propertyToModify = evt.target.id
         copy[propertyToModify] = evt.target.value
-        setHobby(copy)
+        setCurrentHobby(copy)
     }
 
 
@@ -31,7 +29,7 @@ export const NewHobby = () => {
                 <div className="hobby-form">
                     <label htmlFor="text">Enter Below:</label>
                     <input id="label" required autoFocus className="form-control"
-                        value={hobby.label}
+                        value={currentHobby.label}
                         onChange={changeHobbyState}
                     />
                 </div>

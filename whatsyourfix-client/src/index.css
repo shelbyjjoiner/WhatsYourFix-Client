@@ -1,4 +1,10 @@
 body {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5bTpc6goYkj8Glj8tz9EmLovOio5wtgJ9KA&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

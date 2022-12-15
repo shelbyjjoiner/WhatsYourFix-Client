@@ -17,6 +17,7 @@ export const Homepage = () => {
     return <>
         <form className="homepage">
             <h1>Welcome to What's Your Fix?</h1>
+
             <div>judgement-free community to discuss your craziest hyper-fixations!</div>
         </form>
         <article className="hobbies">

@@ -14,9 +14,7 @@ export const NewPostForm = () => {
     })
 
 
-    useEffect(() => {
-        createPost().then()
-    }, [])
+
 
     useEffect(() => {
         getHobbies().then(setHobbies)
