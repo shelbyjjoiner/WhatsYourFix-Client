@@ -4,6 +4,7 @@ import { getPosts } from "../../managers/PostsManager"
 import "./post.css"
 
 export const ViewPost = () => {
+
     const [posts, setPosts] = useState([])
     const navigate = useNavigate()
 
@@ -13,11 +14,15 @@ export const ViewPost = () => {
 
 
 
+
+
+
     return (
         <article className="posts">
             {
                 posts.map(post => {
                     return <section key={`post--${post.id}`} className="posts">
+
                         <div className="post_content">
                             {post.hobbies}
                             {post.body}
