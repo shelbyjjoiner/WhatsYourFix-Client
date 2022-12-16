@@ -7,8 +7,8 @@ export const getUsers = () => {
         .then(response => response.json())
 }
 
-export const getUserById = (user) => {
-    return fetch(`http://localhost:8000/users/${user.id}`, {
+export const getUserById = (userId) => {
+    return fetch(`http://localhost:8000/users/${userId}`, {
         headers: {
             "Accept": "application/json",
             "Content-Type": "application/json",

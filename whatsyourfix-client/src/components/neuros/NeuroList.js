@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { getUsers } from "../../managers/UserManager"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 export const NeuroList = (props) => {
     const [users, setUsers] = useState([])
     const navigate = useNavigate()
+    const { userId } = useParams()
 
     useEffect(() => {
         getUsers().then(data => setUsers(data))
     }, [])
+
 
 
     return (

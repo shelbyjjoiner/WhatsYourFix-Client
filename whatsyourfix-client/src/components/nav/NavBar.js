@@ -16,12 +16,6 @@ export const NavBar = () => {
                         >Logout</button>
                     </ul> :
                     <>
-                        <ol className="nav-item">
-                            <Link className="nav-link" to="/login">Login</Link>
-                        </ol>
-                        <ol className="nav-item">
-                            <Link className="nav-link" to="/register">Register</Link>
-                        </ol>
                     </>
             }
             <ol className="navbar__item">

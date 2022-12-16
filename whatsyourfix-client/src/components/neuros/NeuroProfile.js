@@ -12,9 +12,18 @@ export const NeuroProfile = (props) => {
 
     useEffect(() => {
         getUserById(userId).then(data => setUser(data))
-    }, [userId])
+    }, [])
 
-    useEffect()
+    // useEffect(
+    //     () => {
+    //         const user = recommend.filter(
+    //             users =>
+    //                 users.userId !== userObject.id
+    //         )
+    //         setFilter(rec)
+    //     },
+    //     [recommend]
+    // )
 
     return <>
         <form className="neuro_profile">
