@@ -24,10 +24,10 @@ export const ViewPost = () => {
                     return <section key={`post--${post.id}`} className="posts">
 
                         <div className="post_content">
-                            {post.hobbies}
-                            {post.body}
-                            {post.image}
-                            {post.item}
+                            <div>{post.hobbies}</div>
+                            <div>{post.body}</div>
+                            <div>{post.image}</div>
+                            <div>{post.item}</div>
                         </div>
                     </section>
                 })

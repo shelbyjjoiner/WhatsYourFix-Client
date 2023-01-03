@@ -6,7 +6,6 @@ import "./homepage.css"
 
 export const Homepage = () => {
     const [posts, setPosts] = useState([])
-    const [hobbies, setHobbies] = useState([])
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -21,10 +20,10 @@ export const Homepage = () => {
             <div>judgement-free community to discuss your craziest hyper-fixations!</div>
         </form>
         <article className="hobbies">
-            <h1>Hobbies</h1>
+            <h2>Hobbies</h2>
             <button className="create-hobby" onClick={() => navigate(`/hobby`)}>Add Hobby</button>
         </article>
-        <h1>Posts</h1>
+        <h2>Posts</h2>
         <article className="posts">
             <button className="btn btn-2 btn-sep icon-create"
                 onClick={() => {
@@ -37,6 +36,8 @@ export const Homepage = () => {
                 }}
             >View Posts</button>
         </article>
-
+        <article className="items">
+            <h2>Items Up For Grabs!</h2>
+        </article>
     </>
 }

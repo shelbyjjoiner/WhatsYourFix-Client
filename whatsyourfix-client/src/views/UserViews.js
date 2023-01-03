@@ -15,18 +15,14 @@ import { Authorized } from "./Authorized"
 export const UserViews = () => {
     return <>
         <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route element={<Authorized />}>
-                <Route path="/home" element={<Homepage />} />
-                <Route path="/hobby" element={<NewHobby />} />
-                <Route path="/posts/new" element={<NewPostForm />} />
-                <Route path="/posts/view" element={<ViewPost />} />
-                <Route path="/neuros" element={<NeuroList />} />
-                <Route path="/neuros/:userId" element={<NeuroProfile />} />
-                <Route path="/profile" element={<UserProfile />} />
-                <Route path="/profile/:postId/update" element={<UpdatePost />} />
-            </Route>
+            <Route path="/home" element={<Homepage />} />
+            <Route path="/hobby" element={<NewHobby />} />
+            <Route path="/posts/new" element={<NewPostForm />} />
+            <Route path="/posts/view" element={<ViewPost />} />
+            <Route path="/neuros" element={<NeuroList />} />
+            <Route path="/neuros/:userId" element={<NeuroProfile />} />
+            <Route path="/profile" element={<UserProfile />} />
+            <Route path="/profile/:postId/update" element={<UpdatePost />} />
         </Routes>
     </>
 }
