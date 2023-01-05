@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getUserById } from "../../managers/UserManager"
-import { getHobbies } from "../../managers/HobbiesManager"
 import { getPostByUser } from "../../managers/PostsManager"
+import { getHobbies } from "../../managers/HobbiesManager"
 
 export const NeuroProfile = (props) => {
 
@@ -16,8 +16,9 @@ export const NeuroProfile = (props) => {
     }, [])
 
     useEffect(() => {
-        getPostByUser(displayUser).then(data => setUserPost(data))
+        getPostByUser(displayUserPost).then(data => setUserPost(data))
     })
+
 
     return <>
         <form className="neuro_profile">
@@ -30,6 +31,8 @@ export const NeuroProfile = (props) => {
         </fieldset>
         <fieldset>
             <form className="neuro_posts">
+                <h3>Their Posts</h3>
+                {displayUserPost.post}
 
             </form>
         </fieldset>

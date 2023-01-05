@@ -19,7 +19,3 @@ export const createHobby = (hobby) => {
         body: JSON.stringify(hobby)
     })
 }
-
-export const getHobbyByUser = () => {
-
-}

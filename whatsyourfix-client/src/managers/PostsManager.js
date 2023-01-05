@@ -8,7 +8,7 @@ export const getPosts = () => {
         .then(response => response.json())
 }
 
-//get single post 
+//get single post
 export const getPostById = (id) => {
     return fetch(`http://localhost:8000/posts/${id}`, {
         headers: {
@@ -23,7 +23,7 @@ export const getPostById = (id) => {
 
 
 
-//get single post by user 
+//get posts by user
 export const getPostByUser = (userId) => {
     return fetch(`http://localhost:8000/posts?user=${userId}`, {
         headers: {
@@ -34,7 +34,7 @@ export const getPostByUser = (userId) => {
 }
 
 
-//create a post 
+//create a post
 export const createPost = (post) => {
     return fetch("http://localhost:8000/posts", {
         method: "POST",
@@ -47,7 +47,7 @@ export const createPost = (post) => {
     })
 }
 
-//update a post 
+//update a post
 export const saveUpdatedPost = (post) => {
     return fetch(`http://localhost:8000/posts/${post.id}`, {
         method: "PUT",
